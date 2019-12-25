@@ -41,3 +41,4 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 
 * Plugins managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug).
 * Intellisense and Language Server Protocol by [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim). Running everything through the Language Server Protocol dramatically decreases the mess of plugins that your vim config tends to become.
+* File navigation by [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree).
