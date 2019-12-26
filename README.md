@@ -54,7 +54,7 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 ## Some commands:
 
 * `,nf` - Open NERDTree
-* `,pp` - Search for file in project
-* `,pb` - Search for file in open buffer
-* `,pg` - Search for word across project
-* `,pG` - Search for word under cursor
+* `<C-p>p` - Search for file in project
+* `<C-p>b` - Search for file in open buffer
+* `<C-p>g` - Search for word across project
+* `<C-p>G` - Search for word under cursor

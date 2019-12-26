@@ -28,11 +28,12 @@ set smarttab        " Enable smart-tabs
 set softtabstop=2   " Number of spaces per Tab
 
 " Specific indent settings
-autocmd Filetype go setlocal ts=4 sw=4 noexpandtab
-autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype yaml setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype go setlocal ts=4 sw=4 sts=4 noexpandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype yaml setlocal ts=4 sw=4 sts=4 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
+autocmd Filetype python setlocal ts=4 sw=4 sts=4 expandtab
  
 " == Movement ==== 
 set splitbelow splitright " move the cursor to the window just split
@@ -53,3 +54,4 @@ set hidden          " Hide buffers when abandoned instead of unload
 set history=1000
 set undolevels=1000             " Number of undo levels
 set backspace=indent,eol,start  " Backspace behaviour
+set switchbuf=useopen,usetab    " Prefer current buffer

@@ -33,16 +33,18 @@ function! s:denite_filter_my_settings() abort
   \ <Plug>(denite_filter_quit)
   imap <silent><buffer> <Esc>
   \ <Plug>(denite_filter_quit)
-  inoremap <silent><buffer><expr> <tab>
-  \ denite#do_map('toggle_select').'j'
-  inoremap <silent><buffer><expr> <S-Tab>
-  \ denite#do_map('toggle_select').'k'
   inoremap <silent><buffer><expr> <CR>
   \ denite#do_map('do_action')
   inoremap <silent><buffer><expr> <C-v>
   \ denite#do_map('do_action', 'vsplit')
   inoremap <silent><buffer><expr> <C-h>
   \ denite#do_map('do_action', 'split')
+  " https://github.com/Shougo/denite.nvim/blob/13c8542/doc/denite.txt#L1900
+  " Says this is really not a vim kinda thing... but I like it
+  inoremap <silent><buffer> <tab>
+  \ <Esc><C-w>p:call cursor(line('.')+1,0)<CR><C-w>pA
+  inoremap <silent><buffer> <S-tab>
+  \ <Esc><C-w>p:call cursor(line('.')-1,0)<CR><C-w>pA
 endfunction
 
 try
@@ -66,13 +68,18 @@ try
 
   call denite#custom#option('default', 'split', 'floating')
   call denite#custom#option('default', 'auto_resize', 1)
+  call denite#custom#option('default', 'highlight_matched_char', 'QuickFixLine')
+  call denite#custom#option('default', 'highlight_matched_range', 'Visual')
+  call denite#custom#option('default', 'highlight_window_background', 'Visual')
+
 catch
   echo 'Denite not installed. It should work after running :PlugInstall'
 endtry
 
 " Mappings
-nmap <leader>pp :DeniteProjectDir -start-filter=1 file/rec<CR>
-nmap <leader>pb :Denite -start-filter=1 buffer<CR>
-nmap <leader>pg :Denite grep:. -no-empty<CR>
-nmap <leader>pG :DeniteCursorWord grep:.<CR>
-nmap <leader>p <leader>pp
+nmap <C-p>p :<C-u>DeniteProjectDir -start-filter=1 file/rec<CR>
+nmap <C-b>b :<C-u>Denite -start-filter=1 buffer<CR>
+nmap <C-p>g :<C-u>Denite grep:. -no-empty<CR>
+nmap <C-p>G :<C-u>DeniteCursorWord grep:.<CR>
+nmap <C-p><C-p> <C-p>p
+nmap <C-p> <C-p>p
