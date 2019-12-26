@@ -1,5 +1,10 @@
+" Put NERDTree to the left
 let g:NERDTreeWinPos = "left"
-let g:NERDTreeShowHidden=1
+" Show hidden files and directories
+let g:NERDTreeShowHidden = 1
+
+" Ignore some specific files
+let g:NERDTreeIgnore = ['^\.DS_Store$', '\.git$[[dir]]']
 
 " Autoshow when opening a directory
 autocmd StdinReadPre * let s:std_in=1

@@ -54,10 +54,12 @@ else
 
   pyenv activate nvim_settings_py2
   pip install neovim
+  pip install pynvim
   PYTHON_2_PATH=$(pyenv which python)
 
   pyenv activate nvim_settings_py3
   pip install neovim
+  pip install pynvim
   PYTHON_3_PATH=$(pyenv which python)
 
 fi
