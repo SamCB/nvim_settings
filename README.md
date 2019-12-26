@@ -27,11 +27,23 @@ Having things such as Plug installed or an existing `init.vim` may or may not ca
 brew install nvim
 git clone --depth=1 https://github.com/SamCB/nvim_settings.git ~/.nvim_settings
 sh ~/.nvim_settings/setup.sh
+nvim +PlugInstall
 ```
 
 After running the setup script, there will be a file `~/.config/nvim/my_config.vim`.
 Add any settings you want into that.
-It's also the place to put your coc settings.
+This is also where you'll put config for installing your coc scripts.
+For example:
+
+```vim
+let g:coc_global_extensions = [
+  \ 'coc-tssserver', 'coc-html', 'coc-css', 'coc-python', 'coc-vimlsp'
+\ ]
+```
+
+A list of coc extensions can be found [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
+
+Restarting vim should make the extensions install.
 
 ## Wow you're pretty clever.
 
