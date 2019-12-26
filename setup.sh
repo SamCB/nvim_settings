@@ -1,13 +1,16 @@
 #!/bin/bash
 set -e
 
-while getopts "so" opt; do
+while getopts "pno" opt; do
   case "$opt" in
-  s)
+  p)
     SKIP_PY=1
     ;;
   o)
     OVERRIDE_PY=1
+    ;;
+  n)
+    SKIP_NODE=1
     ;;
   esac
 done
@@ -41,30 +44,52 @@ else
   {
     pyenv virtualenv 2.7.17 nvim_settings_py2
   } || {
-    echo "If it already exists, setting -o will override the creation or -s will skip all python setup (may cause problems if it hasn't already been configured)"
+    echo "If it already exists, setting -o will override the creation or -p will skip all python setup (may cause problems if it hasn't already been configured)"
     exit 1
   }
   {
     pyenv virtualenv 3.8.0 nvim_settings_py3
   } || {
-    echo "If it already exists, setting -o will override the creation or -s will skip all python setup (may cause problems if it hasn't already been configured)"
+    echo "If it already exists, setting -o will override the creation or -p will skip all python setup (may cause problems if it hasn't already been configured)"
     exit 1
   }
 
-  # gross workaround to get virtualenv working
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
+fi
 
-  pyenv activate nvim_settings_py2
+# gross workaround to get virtualenv working
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+pyenv activate nvim_settings_py2
+if [ -z "$SKIP_PY" ]; then
   pip install neovim
   pip install pynvim
-  PYTHON_2_PATH=$(pyenv which python)
+fi
+PYTHON_2_PATH=$(pyenv which python)
 
-  pyenv activate nvim_settings_py3
+pyenv activate nvim_settings_py3
+if [ -z "$SKIP_PY" ]; then
   pip install neovim
   pip install pynvim
-  PYTHON_3_PATH=$(pyenv which python)
+fi
+PYTHON_3_PATH=$(pyenv which python)
 
+if [ -n "$SKIP_NODE" ]; then
+  echo "Skipping Node setup"
+else
+  echo "Setting up Node"
+  # If yarn exists, assume we want to use it.
+  #  otherwise use npm
+  {
+    yarn global add neovim
+  } || {
+    ERR=$?
+    if [ $ERR -eq 127 ]; then
+      npm install -g neovim
+    else
+      exit $ERR
+    fi
+  }
 fi
 
 echo "Generating Vim Scripts"
