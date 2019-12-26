@@ -25,9 +25,13 @@ Having things such as Plug installed or an existing `init.vim` may or may not ca
 
 ```sh
 brew install nvim
-git clone --depth=1 https://github.com/SamCB/nvim_settings.git ~/.vim_settings
+git clone --depth=1 https://github.com/SamCB/nvim_settings.git ~/.nvim_settings
 sh ~/.nvim_settings/setup.sh
 ```
+
+After running the setup script, there will be a file `~/.config/nvim/my_config.vim`.
+Add any settings you want into that.
+It's also the place to put your coc settings.
 
 ## Wow you're pretty clever.
 
@@ -56,5 +60,5 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 * `,nf` - Open NERDTree
 * `<C-p>p` - Search for file in project
 * `<C-p>b` - Search for file in open buffer
-* `<C-p>g` - Search for word across project
-* `<C-p>G` - Search for word under cursor
+* `<C-p>g` - Grep across project
+* `<C-p>G` - Grep for word under cursor
