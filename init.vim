@@ -1,8 +1,17 @@
 let $MYVIMRC = "~/.config/nvim/init.vim"
-let $MYVIMDIR = "~/.vim_settings/"
+let $MYVIMDIR = "~/.nvim_settings/"
 
-so vimscripts/generated.vim
-so vimscripts/mappings.vim
-so vimscripts/global_settings.vim
-so vimscripts/installs.vim
+function! s:source_file(path, ...)
+  let abspath = resolve($MYVIMDIR . '/' . a:path)
+  execute 'source' fnameescape(abspath)
+endfunction
 
+call s:source_file("vimscripts/generated.vim")
+call s:source_file("vimscripts/mappings.vim")
+call s:source_file("vimscripts/global_settings.vim")
+call s:source_file("vimscripts/installs.vim")
+
+call s:source_file("vimscripts/plugins/coc_settings.vim")
+call s:source_file("vimscripts/plugins/denite.vim")
+call s:source_file("vimscripts/plugins/nerdtree.vim")
+call s:source_file("vimscripts/plugins/solarized8.vim")

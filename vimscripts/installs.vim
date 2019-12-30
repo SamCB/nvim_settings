@@ -9,8 +9,7 @@ Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " Nerdtree and everything good it brings.
 Plug 'scrooloose/nerdtree'
 
-call plug#end()
+" Colourscheme
+Plug 'lifepillar/vim-solarized8'
 
-so vimscripts/plugins/coc_settings.vim
-so vimscripts/plugins/denite.vim
-so vimscripts/plugins/nerdtree.vim
+call plug#end()

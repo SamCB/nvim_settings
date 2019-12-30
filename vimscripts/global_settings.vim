@@ -49,6 +49,8 @@ if has('termguicolors')
     set termguicolors
 endif
 
+set winbl=10        " Partially transparant window
+
 " == Misc ====
 set hidden          " Hide buffers when abandoned instead of unload
 set history=1000

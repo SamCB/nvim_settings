@@ -43,7 +43,7 @@ let g:coc_global_extensions = [
 
 A list of coc extensions can be found [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
 
-Restarting vim should make the extensions install.
+Restarting vim *should* make the extensions install.
 
 ## Wow you're pretty clever.
 
