@@ -5,8 +5,8 @@ An nvim config I made for myself.
 If it works for you, great!
 No guarantees that it will.
 
->> *Note:* Still a WIP. I'm not using this for production stuff just yet.
->> This message will be removed when I'm happy with it.
+> *Note:* Still a WIP. I'm not using this for production stuff just yet.
+> This message will be removed when I'm happy with it.
 
 ## Requirements
 
@@ -39,7 +39,7 @@ This is also where you'll put config for installing your coc scripts.
 For example:
 
 ```vim
-let g:coc_global_extensions = [
+g:coc_global_extensions = [
   \ 'coc-tssserver', 'coc-html', 'coc-css', 'coc-python', 'coc-vimlsp'
 \ ]
 ```

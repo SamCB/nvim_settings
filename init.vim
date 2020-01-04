@@ -1,4 +1,5 @@
-let $MYVIMRC = "~/.config/nvim/init.vim"
+let $CONFIG_DIR= "~/.config/nvim/"
+let $VIMRC = $CONFIG_DIR . "/init.vim"
 let $MYVIMDIR = "~/.nvim_settings/"
 
 function! s:source_file(path, ...)

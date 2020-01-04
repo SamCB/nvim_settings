@@ -1,4 +1,4 @@
-call plug#begin($MYVIMDIR.'/plugged')
+call plug#begin($CONFIG_DIR.'/plugged')
 
 " Intellisense and full language server protocol!!!
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
