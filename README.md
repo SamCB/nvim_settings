@@ -5,6 +5,9 @@ An nvim config I made for myself.
 If it works for you, great!
 No guarantees that it will.
 
+>> *Note:* Still a WIP. I'm not using this for production stuff just yet.
+>> This message will be removed when I'm happy with it.
+
 ## Requirements
 
 Expected to have installed:
