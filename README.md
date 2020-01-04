@@ -1,5 +1,5 @@
-# Someone ought to write another nvim config...
-## ...someone did
+# Problem: too many nvim configs on github
+## Solution: write another one
 
 An nvim config I made for myself.
 If it works for you, great!
@@ -72,6 +72,7 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 
 ## Some commands:
 
+* `,` - Leader
 * `,nf` - Open NERDTree
 * `<C-p>p` - Search for file in project
 * `<C-p>b` - Search for file in open buffer
