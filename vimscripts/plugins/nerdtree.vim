@@ -2,6 +2,8 @@
 let g:NERDTreeWinPos = "left"
 " Show hidden files and directories
 let g:NERDTreeShowHidden = 1
+" Clean up the UI a bit
+let g:NERDTreeMinimalUI = 1
 
 " Ignore some specific files
 let g:NERDTreeIgnore = ['^\.DS_Store$', '\.git$[[dir]]']

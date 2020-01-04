@@ -1,8 +1,24 @@
 " A lot of this is from:
 " https://github.com/ctaylo21/jarvis/blob/master/config/nvim/init.vim#L58
 
+augroup denite_entry
+  autocmd!
+  autocmd FileType denite call s:denite_my_settings()
+  autocmd FileType denite-filter call s:denite_filter_my_settings()
+  autocmd WinEnter * if &ft =~# '^denite' | call s:denite_entry() | endif
+  autocmd WinLeave * if &ft ==# 'denite' | call s:denite_exit() | endif
+augroup END
+
+
+function! s:denite_entry() abort
+  execute "hi CursorLine guifg=".g:terminal_color_11
+endfunction
+
+function! s:denite_exit() abort
+  hi CursorLine guifg=NONE
+endfunction
+
 " Define mappings inside denite
-autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
 
   nnoremap <silent><buffer><expr> <CR>
@@ -17,17 +33,12 @@ function! s:denite_my_settings() abort
   \ denite#do_map('quit')
   nnoremap <silent><buffer><expr> i
   \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <tab>
-  \ denite#do_map('toggle_select').'j'
-  nnoremap <silent><buffer><expr> <S-Tab>
-  \ denite#do_map('toggle_select').'k'
   nnoremap <silent><buffer><expr> <C-v>
   \ denite#do_map('do_action', 'vsplit')
   nnoremap <silent><buffer><expr> <C-h>
   \ denite#do_map('do_action', 'split')
 endfunction
 
-autocmd FileType denite-filter call s:denite_filter_my_settings()
 function! s:denite_filter_my_settings() abort
   imap <silent><buffer> <C-o>
   \ <Plug>(denite_filter_quit)

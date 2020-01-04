@@ -39,7 +39,7 @@ This is also where you'll put config for installing your coc scripts.
 For example:
 
 ```vim
-g:coc_global_extensions = [
+let g:coc_global_extensions = [
   \ 'coc-tssserver', 'coc-html', 'coc-css', 'coc-python', 'coc-vimlsp'
 \ ]
 ```
