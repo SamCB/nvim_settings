@@ -5,7 +5,7 @@ An nvim config I made for myself.
 If it works for you, great!
 No guarantees that it will.
 
-> *Note:* Still a WIP. I'm not using this for production stuff just yet.
+> **Note:** Still a WIP. I'm not using this for production stuff just yet.
 > This message will be removed when I'm happy with it.
 
 ## Requirements
@@ -20,6 +20,7 @@ Expected to have installed:
 Recommend having the following installed
 
 * [ripgrep](https://github.com/BurntSushi/ripgrep) to replace grep when searching with denite
+* [powerline fonts](https://powerline.readthedocs.io/en/master/installation.html#patched-fonts) to pretty up the airline plugin
 
 ## Install
 
@@ -45,8 +46,13 @@ let g:coc_global_extensions = [
 ```
 
 A list of coc extensions can be found [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
-
 Restarting vim *should* make the extensions install.
+
+If you have and like to use powerline fonts for airline, then you can also set that there.
+
+```vim
+let g:airline_powerline_fonts = 1
+```
 
 ## Wow you're pretty clever.
 
@@ -69,6 +75,8 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 * Intellisense and Language Server Protocol by [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim). Running everything through the Language Server Protocol dramatically decreases the mess of plugins that your vim config tends to become.
 * Search by [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim). Recommend installing ripgrep to use with this.
 * File navigation by [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree).
+* Theme [lifepillar/vim-solarized8](https://github.com/lifepillar/vim-solarized8).
+* "Powerline" by [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline).
 
 ## Some commands:
 

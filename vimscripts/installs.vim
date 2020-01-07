@@ -12,4 +12,9 @@ Plug 'scrooloose/nerdtree'
 " Colourscheme
 Plug 'lifepillar/vim-solarized8'
 
+" Airline is somewhat necessary for this to be called a vim config amiright?
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+
 call plug#end()
