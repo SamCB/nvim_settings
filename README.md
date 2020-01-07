@@ -5,8 +5,8 @@ An nvim config I made for myself.
 If it works for you, great!
 No guarantees that it will.
 
-> **Note:** Still a WIP. I'm not using this for production stuff just yet.
-> This message will be removed when I'm happy with it.
+> **Note:** Alpha. I'm just beginning to use this for _"real programming"_, as such, I'm likely to change things as it goes.
+> This message will be removed at some stage when I'd consider it _"stable"_.
 
 ## Requirements
 
