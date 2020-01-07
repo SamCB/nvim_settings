@@ -41,7 +41,7 @@ For example:
 
 ```vim
 let g:coc_global_extensions = [
-  \ 'coc-tssserver', 'coc-html', 'coc-css', 'coc-python', 'coc-vimlsp'
+  \ 'coc-tsserver', 'coc-html', 'coc-css', 'coc-python', 'coc-vimlsp'
 \ ]
 ```
 
