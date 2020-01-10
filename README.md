@@ -8,13 +8,13 @@ No guarantees that it will.
 > **Note:** Alpha. I'm just beginning to use this for _"real programming"_, as such, I'm likely to change things as it goes.
 > This message will be removed at some stage when I'd consider it _"stable"_.
 
-## Wait, so if all that exists, why a new one?
+### Wait, so if all that exists, why a new one?
 
 The goal of this is to keep nvim simple.
 Recently with developement and support of the Language Server Protocol, it doesn't make sense to keep the way you deal with your languages wrapped up in your vim settings.
 As such, first priority of this setup is to rely on the LSP as much as possible.
 
-## What's in here?
+### What's in here?
 
 * Plugins managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug).
 * Intellisense and Language Server Protocol by [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim). Running everything through the Language Server Protocol dramatically decreases the mess of plugins that your vim config tends to become.
@@ -23,7 +23,7 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 * Theme [lifepillar/vim-solarized8](https://github.com/lifepillar/vim-solarized8).
 * "Powerline" by [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline).
 
-## Wow you're pretty clever.
+### Wow you're pretty clever.
 
 Actually this is just "inspired" from a bunch of places.
 The following are configs I've used or taken an extended look at in the past and so some of how this works will probably look somewhat familiar.
