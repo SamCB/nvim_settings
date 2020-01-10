@@ -110,3 +110,4 @@ Note, do _not_ add the `plug#begin` or `plug#end` statements to this file.
 | `gr` | goto references |
 | `cr` | rename |
 | `cf` | fix |
+| `Bd` | Buffer delete without window close |
