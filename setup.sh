@@ -101,9 +101,11 @@ let g:python_host_prog = '$PYTHON_2_PATH'
 let g:python3_host_prog = '$PYTHON_3_PATH'
 EOF
 
-touch ~/.config/nvim/my_config.vim 
+touch ~/.config/nvim/my_config.vim
+touch ~/.config/nvim/my_installs.vim
 
-cat > ~/.config/nvim/init.vim <<EOF 
+cat > ~/.config/nvim/init.vim <<EOF
+let \$CUSTOM_INSTALLS_FILE = "~/.config/nvim/my_installs.vim"
 set runtimepath+=~/.nvim_settings
 
 source ~/.nvim_settings/init.vim

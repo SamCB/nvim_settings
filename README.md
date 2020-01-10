@@ -60,6 +60,8 @@ sh ~/.nvim_settings/setup.sh
 nvim +PlugInstall
 ```
 
+### Customising
+
 After running the setup script, there will be a file `~/.config/nvim/my_config.vim`.
 Add any settings you want into that.
 This is also where you'll put config for installing your coc scripts.
@@ -80,11 +82,31 @@ If you have and like to use powerline fonts for airline, then you can also set t
 let g:airline_powerline_fonts = 1
 ```
 
+There is also a file: `~/.config/nvim/my_installs.vim` which you can use to add your own plugins using the usual [plug](https://github.com/junegunn/vim-plug) methods.
+
+```vim
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+```
+
+Note, do _not_ add the `plug#begin` or `plug#end` statements to this file.
+
 ## Some commands:
 
-* `,` - Leader
-* `,nf` - Open NERDTree
-* `<C-p>p` - Search for file in project
-* `<C-p>b` - Search for file in open buffer
-* `<C-p>g` - Grep across project
-* `<C-p>G` - Grep for word under cursor
+| Key | Command |
+| --- | ------- |
+| `,` | Leader |
+| `,nf` | Open NERDTree |
+| `<C-p>p` | Search for file in project |
+| `<C-p>b` | Search for file in open buffer |
+| `<C-p>g` | Grep across project |
+| `<C-p>G` | Grep for word under cursor |
+| `K` | Open documentation |
+| `g[` | goto previous problem |
+| `g]` | goto next problem |
+| `gd` | goto definition |
+| `gy` | goto type definition |
+| `gi` | goto implementation |
+| `gr` | goto references |
+| `cr` | rename |
+| `cf` | fix |

@@ -16,5 +16,6 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+execute 'source '.$CUSTOM_INSTALLS_FILE
 
 call plug#end()
