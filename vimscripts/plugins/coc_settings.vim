@@ -39,6 +39,8 @@ nmap <silent> <leader>l :lopen<CR>
 nmap <silent> <leader>L :lclose<CR>
 nmap <silent> <leader>q :copen<CR>
 nmap <silent> <leader>Q :cclose<CR>
+" The color for the line is quite difficult to read
+hi QuickFixLine guibg=NONE
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
