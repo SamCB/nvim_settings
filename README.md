@@ -115,4 +115,8 @@ Use the command `:CocConfig` to open the file.
 | `gr` | goto references |
 | `cr` | rename |
 | `cf` | fix |
+| `,l` | open locationlist |
+| `,q` | open quickfix |
+| `,L` | close locationlist |
+| `,Q` | close quickfix |
 | `BD` | Buffer delete without window close |

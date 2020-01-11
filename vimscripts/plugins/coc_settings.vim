@@ -34,6 +34,12 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Locationlist/Quickfix windows
+nmap <silent> <leader>l :lopen<CR>
+nmap <silent> <leader>L :lclose<CR>
+nmap <silent> <leader>q :copen<CR>
+nmap <silent> <leader>Q :cclose<CR>
+
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
