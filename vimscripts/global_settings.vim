@@ -34,6 +34,11 @@ autocmd Filetype yaml setlocal ts=4 sw=4 sts=4 expandtab
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 sts=4 expandtab
+
+" == Other File Settings ====
+" Comment sytax for json (jsonc - https://code.visualstudio.com/docs/languages/json#_json-with-comments)
+autocmd FileType json syntax match Comment +\/\/.\+$+
+autocmd FileType json syntax region Comment start="/\*"  end="\*/"
  
 " == Movement ==== 
 set splitbelow splitright " move the cursor to the window just split

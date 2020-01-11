@@ -91,6 +91,11 @@ Plug 'peitalin/vim-jsx-typescript'
 
 Note, do _not_ add the `plug#begin` or `plug#end` statements to this file.
 
+[Coc](https://github.com/neoclide/coc.nvim) has its own config JSON file.
+Configuration of that is left as an exercise for the user.
+Details can be found [here](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file).
+Use the command `:CocConfig` to open the file.
+
 ## Some commands:
 
 | Key | Command |
@@ -110,4 +115,4 @@ Note, do _not_ add the `plug#begin` or `plug#end` statements to this file.
 | `gr` | goto references |
 | `cr` | rename |
 | `cf` | fix |
-| `Bd` | Buffer delete without window close |
+| `BD` | Buffer delete without window close |
