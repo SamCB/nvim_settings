@@ -2,6 +2,7 @@ call plug#begin($CONFIG_DIR.'/plugged')
 
 " Intellisense and full language server protocol!!!
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 
 " Fuzzy finding and all that good stuff
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
