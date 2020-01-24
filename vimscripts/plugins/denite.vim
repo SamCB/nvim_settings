@@ -88,9 +88,7 @@ catch
 endtry
 
 " Mappings
-nmap <C-p>p :<C-u>DeniteProjectDir -start-filter=1 file/rec<CR>
-nmap <C-p>b :<C-u>Denite -start-filter=1 buffer<CR>
-nmap <C-p>g :<C-u>Denite grep:. -no-empty<CR>
-nmap <C-p>G :<C-u>DeniteCursorWord grep:.<CR>
-nmap <C-p><C-p> <C-p>p
-nmap <C-p> <C-p>p
+nmap <C-p> :<C-u>DeniteProjectDir -start-filter=1 file/rec<CR>
+nmap <C-o>b :<C-u>Denite -start-filter=1 buffer<CR>
+nmap <C-o>g :<C-u>Denite grep:. -no-empty<CR>
+nmap <C-o>G :<C-u>DeniteCursorWord grep:.<CR>

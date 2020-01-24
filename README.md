@@ -107,10 +107,10 @@ Use the command `:CocConfig` to open the file.
 | --- | ------- |
 | `,` | Leader |
 | `,nf` | Open NERDTree |
-| `<C-p>p` | Search for file in project |
-| `<C-p>b` | Search for file in open buffer |
-| `<C-p>g` | Grep across project |
-| `<C-p>G` | Grep for word under cursor |
+| `<C-p>` | Search for file in project |
+| `<C-o>b` | Search for file in open buffer |
+| `<C-o>g` | Grep across project |
+| `<C-o>G` | Grep for word under cursor |
 | `K` | Open documentation |
 | `g[` | goto previous problem |
 | `g]` | goto next problem |
