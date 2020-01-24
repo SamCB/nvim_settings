@@ -76,6 +76,8 @@ let g:coc_global_extensions = [
 
 A list of coc extensions can be found [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
 Restarting vim *should* make the extensions install.
+(Recently it has become possible to use vim-plug to install coc extensions.
+If you'd rather do that see [here](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#use-vims-plugin-manager-for-coc-extension) and my comments on vim-plug below for details.)
 
 If you have and like to use powerline fonts for airline, then you can also set that there.
 
@@ -83,7 +85,8 @@ If you have and like to use powerline fonts for airline, then you can also set t
 let g:airline_powerline_fonts = 1
 ```
 
-There is also a file: `~/.config/nvim/my_installs.vim` which you can use to add your own plugins using the usual [plug](https://github.com/junegunn/vim-plug) methods.
+There is also a file: `~/.config/nvim/my_installs.vim` which you can use to add your own plugins using the usual [vim-plug](https://github.com/junegunn/vim-plug) methods.
+For example:
 
 ```vim
 Plug 'leafgarland/typescript-vim'
@@ -91,6 +94,7 @@ Plug 'peitalin/vim-jsx-typescript'
 ```
 
 Note, do _not_ add the `plug#begin` or `plug#end` statements to this file.
+This file is called after all other Plug commands, but before `plug#end`.
 
 [Coc](https://github.com/neoclide/coc.nvim) has its own config JSON file.
 Configuration of that is left as an exercise for the user.
