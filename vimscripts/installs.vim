@@ -6,6 +6,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Fuzzy finding and all that good stuff
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" Nerdtree and everything good it brings.
+Plug 'scrooloose/nerdtree'
+
 " Colourscheme
 Plug 'lifepillar/vim-solarized8'
 
