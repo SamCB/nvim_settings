@@ -106,7 +106,8 @@ Use the command `:CocConfig` to open the file.
 | Key | Command |
 | --- | ------- |
 | `,` | Leader |
-| `,nf` | Open NERDTree |
+| `,nf` | Open NERDTree pane |
+| `,f` | Open temporary NERDTree pane |
 | `<C-p>` | Search for file in project |
 | `<C-o>b` | Search for file in open buffer |
 | `<C-o>g` | Grep across project |

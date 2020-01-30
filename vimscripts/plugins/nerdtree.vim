@@ -4,12 +4,25 @@ let g:NERDTreeWinPos = "left"
 let g:NERDTreeShowHidden = 1
 " Clean up the UI a bit
 let g:NERDTreeMinimalUI = 1
+" Close on open
+let g:NERDTreeQuitOnOpen = 1
 
 " Ignore some specific files
 let g:NERDTreeIgnore = ['^\.DS_Store$', '\.git$[[dir]]']
 
-" Autoshow when opening a directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | wincmd p | endif
+function! s:SoftNerdTree() abort
+  if bufname('%') =~# "^NERD_tree_"
+    call <SID>SoftNerdTreeExit()
+  else
+    execute "NERDTreeFocus"
+    autocmd! BufLeave NERD_tree_* call <SID>SoftNerdTreeExit()
+  endif
+endfunction
+
+function! s:SoftNerdTreeExit() abort
+  autocmd! BufLeave NERD_tree_*
+  execute "NERDTreeToggle"
+endfunction
 
 map <leader>nf :NERDTreeFocus<CR>
+map <leader>f :call <SID>SoftNerdTree()<CR>
