@@ -1,7 +1,7 @@
-# Problem: too many nvim configs on github
+# Problem: too many neovim configs on github
 ## Solution: write another one
 
-An nvim config I made for myself.
+A neovim config I made for myself.
 If it works for you, great!
 No guarantees that it will.
 
@@ -10,7 +10,7 @@ No guarantees that it will.
 
 ### Wait, so if all that exists, why a new one?
 
-The goal of this is to keep nvim simple.
+The goal of this is to keep neovim simple.
 Recently with developement and support of the Language Server Protocol, it doesn't make sense to keep the way you deal with your languages wrapped up in your vim settings.
 As such, first priority of this setup is to rely on the LSP as much as possible.
 
@@ -20,9 +20,14 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 * Intellisense and Language Server Protocol by [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim). Running everything through the Language Server Protocol dramatically decreases the mess of plugins that your vim config tends to become.
 * Search by [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim). Recommend installing ripgrep to use with this.
 * File navigation by [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree).
-* Snippet handling by [neoclide/coc-snippets](https://github.com/neoclide/coc-snippets). See docs for adding your own snippets.
 * Theme [lifepillar/vim-solarized8](https://github.com/lifepillar/vim-solarized8).
 * "Powerline" by [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline).
+
+And that's it. 
+Simple right?
+
+Importantly, this config doesn't make any assumptions of what languages you program in.
+You can easily configure that yourself (see below for details).
 
 ### Wow you're pretty clever.
 
@@ -39,7 +44,7 @@ The following are configs I've used or taken an extended look at in the past and
 
 Expected to have installed:
 
-* nvim (I did this in v0.4.3 so no clue how it'll work elsewhere)
+* neovim (I did this in v0.4.3 so no clue how it'll work elsewhere)
 * pyenv and virtualenv
 
 ### Recommended
@@ -119,9 +124,9 @@ Use the command `:CocConfig` to open the file.
 | `gy` | goto type definition |
 | `gi` | goto implementation |
 | `gr` | goto references |
-| `cr` | rename |
-| `cf` | fix |
-| `ca` | code action |
+| `,cr` | rename |
+| `,cf` | fix |
+| `,ca` | code action |
 | `,l` | open locationlist |
 | `,q` | open quickfix |
 | `,L` | close locationlist |
