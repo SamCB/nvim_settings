@@ -61,10 +61,9 @@ nmap <leader>cr <Plug>(coc-rename)
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>ca  <Plug>(coc-codeaction-selected)
-nmap <leader>ca  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>cac  <Plug>(coc-codeaction)
+nmap <leader>ca  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
 nmap <leader>cf  <Plug>(coc-fix-current)
 

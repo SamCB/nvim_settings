@@ -89,6 +89,6 @@ endtry
 
 " Mappings
 nmap <C-p> :<C-u>DeniteProjectDir -start-filter=1 file/rec<CR>
-nmap <C-o>b :<C-u>Denite -start-filter=1 buffer<CR>
-nmap <C-o>g :<C-u>Denite grep:. -no-empty<CR>
-nmap <C-o>G :<C-u>DeniteCursorWord grep:.<CR>
+nmap <C-b> :<C-u>Denite -start-filter=1 buffer<CR>
+nmap <C-g>g :<C-u>Denite grep:. -no-empty<CR>
+nmap <C-g>G :<C-u>DeniteCursorWord grep:.<CR>

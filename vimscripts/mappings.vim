@@ -4,3 +4,5 @@ let mapleader = ","
 " https://stackoverflow.com/a/4468491/1112586
 " https://stackoverflow.com/a/29179159/1112586
 command! BD bp|bd #
+
+nmap <leader>/ :let @/ = ""<CR>

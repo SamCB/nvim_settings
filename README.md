@@ -114,9 +114,9 @@ Use the command `:CocConfig` to open the file.
 | `,nf` | Open NERDTree pane |
 | `,f` | Open temporary NERDTree pane |
 | `<C-p>` | Search for file in project |
-| `<C-o>b` | Search for file in open buffer |
-| `<C-o>g` | Grep across project |
-| `<C-o>G` | Grep for word under cursor |
+| `<C-b>` | Search for file in open buffer |
+| `<C-g>g` | Grep across project |
+| `<C-g>G` | Grep for word under cursor |
 | `K` | Open documentation |
 | `g[` | goto previous problem |
 | `g]` | goto next problem |
@@ -131,4 +131,5 @@ Use the command `:CocConfig` to open the file.
 | `,q` | open quickfix |
 | `,L` | close locationlist |
 | `,Q` | close quickfix |
-| `BD` | Buffer delete without window close |
+| `:BD` | Buffer delete without window close |
+| `,/` | Clear last search pattern |

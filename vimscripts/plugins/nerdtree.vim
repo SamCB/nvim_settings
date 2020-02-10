@@ -14,7 +14,7 @@ function! s:SoftNerdTree() abort
   if bufname('%') =~# "^NERD_tree_"
     call <SID>SoftNerdTreeExit()
   else
-    execute "NERDTreeFocus"
+    execute "NERDTreeFind"
     autocmd! BufLeave NERD_tree_* call <SID>SoftNerdTreeExit()
   endif
 endfunction
