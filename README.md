@@ -131,5 +131,6 @@ Use the command `:CocConfig` to open the file.
 | `,q` | open quickfix |
 | `,L` | close locationlist |
 | `,Q` | close quickfix |
+| `,o` | jump into/out of floating coc window |
 | `:BD` | Buffer delete without window close |
 | `,/` | Clear last search pattern |

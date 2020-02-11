@@ -56,6 +56,34 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Jump into the floating window, try to expand
+function! s:bigFloatingWindow()
+  if (coc#util#has_float())
+    if (exists('w:coc_floating_window') && w:coc_floating_window == 1)
+    " shrink and leave window
+    let w:coc_floating_window = 0
+
+    execute 'resize '.w:default_height
+    execute 'vertical resize '.w:default_width
+
+      wincmd w
+    else
+      " enter and expand window
+      call coc#util#float_jump()
+      let w:coc_floating_window = 1
+      let w:default_width = winwidth(0)
+      let w:default_height = winheight(0)
+
+      180wincmd |
+      20wincmd _
+
+    endif
+  endif
+endfunction
+
+
+nmap <leader>o :call <SID>bigFloatingWindow()<CR>
+
 " Remap for rename current word
 nmap <leader>cr <Plug>(coc-rename)
 
