@@ -132,5 +132,7 @@ Use the command `:CocConfig` to open the file.
 | `,L` | close locationlist |
 | `,Q` | close quickfix |
 | `,o` | jump into/out of floating coc window |
-| `:BD` | Buffer delete without window close |
 | `,/` | Clear last search pattern |
+| `:BD` | Buffer delete without window close |
+| `:TF` | Toggle fold mode (indent) on or off |
+| `:TF s` | Toggle fold mode (syntax) on or off |
