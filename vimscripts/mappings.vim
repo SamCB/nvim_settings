@@ -5,8 +5,11 @@ let mapleader = ","
 " https://stackoverflow.com/a/29179159/1112586
 command! BD bp|bd #
 
+" Clear current search (stupid XY solution for cleaning highlighting)
 nmap <leader>/ :let @/ = ""<CR>
 
+" :TF or :ToggleFold to enable or disable toggling of folds
+" :TF s toggles using syntax mode
 function! s:ToggleFolds(...)
   if (exists('b:fold_enabled') && b:fold_enabled == 1)
     set foldmethod=manual
@@ -29,3 +32,4 @@ endfunction
 
 command! -nargs=* ToggleFold call <SID>ToggleFolds(<f-args>)
 command! -nargs=* TF call <SID>ToggleFolds(<f-args>)
+
