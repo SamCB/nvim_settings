@@ -33,3 +33,18 @@ endfunction
 command! -nargs=* ToggleFold call <SID>ToggleFolds(<f-args>)
 command! -nargs=* TF call <SID>ToggleFolds(<f-args>)
 
+" Copy current buffer to the next pane moved to
+function! s:PrepareCopyBuffer()
+  let s:bufferNr = bufnr('%')
+  let s:cursor_pos = getpos('.')
+  echo 'saving buffer ' . s:bufferNr . ' with position ' . s:cursor_pos[1] . ':' . s:cursor_pos[2]
+  autocmd! WinEnter * ++once call <SID>CopyBuffer(s:bufferNr, s:cursor_pos)
+endfunction
+
+function! s:CopyBuffer(buffer, cursor_pos)
+  echo 'switching to buffer '. a:buffer . ' with position ' . a:cursor_pos[1] . ':' . a:cursor_pos[2]
+  execute ":b ". a:buffer
+  call cursor(a:cursor_pos[1], a:cursor_pos[2])
+endfunction
+
+nmap <leader>c :call <SID>PrepareCopyBuffer()<CR>

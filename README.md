@@ -106,15 +106,15 @@ Configuration of that is left as an exercise for the user.
 Details can be found [here](https://github.com/neoclide/coc.nvim/wiki/Using-the-configuration-file).
 Use the command `:CocConfig` to open the file.
 
-## Some commands:
+## Some commands and personal shortcuts:
 
-| Key | Command |
-| --- | ------- |
-| `,` | Leader |
-| `,nf` | Open NERDTree pane |
-| `,f` | Open temporary NERDTree pane |
-| `<C-p>` | Search for file in project |
-| `<C-b>` | Search for file in open buffer |
+| Key | Command | Key | Command |
+| --- | ------- | --- | ------- |
+| `,` | Leader | `,/` | Clear last search pattern |
+| `,nf` | Open NERDTree pane | `:BD` | Buffer delete without window close |
+| `,f` | Open temporary NERDTree pane | `:TF` | Toggle fold mode (indent) on or off |
+| `<C-p>` | Search for file in project | `:TF s` | Toggle fold mode (syntax) on or off |
+| `<C-b>` | Search for file in open buffer | `,c` | Next window visited will switch to current buffer |
 | `<C-g>g` | Grep across project |
 | `<C-g>G` | Grep for word under cursor |
 | `K` | Open documentation |
@@ -132,7 +132,3 @@ Use the command `:CocConfig` to open the file.
 | `,L` | close locationlist |
 | `,Q` | close quickfix |
 | `,o` | jump into/out of floating coc window |
-| `,/` | Clear last search pattern |
-| `:BD` | Buffer delete without window close |
-| `:TF` | Toggle fold mode (indent) on or off |
-| `:TF s` | Toggle fold mode (syntax) on or off |
