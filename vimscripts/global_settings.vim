@@ -18,6 +18,10 @@ set infercase       " Adjust case in insert completion mode
 set wrapscan        " Search wraps around end of file
 set wildignore+=**/node_modules/** " Things to ingore when searching
  
+" == File Loading ====
+set autoread
+au FocusGained * :checktime
+
 " == Indent ====
 " Default indent settings
 set autoindent      " Auto-indent new lines
@@ -62,3 +66,4 @@ set history=1000
 set undolevels=1000             " Number of undo levels
 set backspace=indent,eol,start  " Backspace behaviour
 set switchbuf=useopen,usetab    " Prefer current buffer
+
