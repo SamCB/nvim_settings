@@ -92,3 +92,5 @@ nmap <C-p> :<C-u>DeniteProjectDir -start-filter=1 file/rec<CR>
 nmap <C-b> :<C-u>Denite -start-filter=1 buffer<CR>
 nmap <C-g>g :<C-u>Denite grep:. -no-empty<CR>
 nmap <C-g>G :<C-u>DeniteCursorWord grep:.<CR>
+
+nmap <C-g>s :<C-u>Denite grep:. -no-empty -post-action=open -split=horizontal -filter-split-direction=botright<CR>

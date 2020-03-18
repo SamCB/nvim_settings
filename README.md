@@ -117,6 +117,7 @@ Use the command `:CocConfig` to open the file.
 | `<C-b>` | Search for file in open buffer | `,c` | Next window visited will switch to current buffer |
 | `<C-g>g` | Grep across project |
 | `<C-g>G` | Grep for word under cursor |
+| `<C-g>s` | Grep across project, drawer mode |
 | `K` | Open documentation |
 | `g[` | goto previous problem |
 | `g]` | goto next problem |
