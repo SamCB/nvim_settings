@@ -114,7 +114,7 @@ Use the command `:CocConfig` to open the file.
 | `,nf` | Open NERDTree pane | `:BD` | Buffer delete without window close |
 | `,f` | Open temporary NERDTree pane | `:TF` | Toggle fold mode (indent) on or off |
 | `<C-p>` | Search for file in project | `:TF s` | Toggle fold mode (syntax) on or off |
-| `<C-b>` | Search for file in open buffer | `,c` | Next window visited will switch to current buffer |
+| `<C-b>` | Search for file in open buffer | `,b` | Next window visited will switch to current buffer |
 | `<C-g>g` | Grep across project |
 | `<C-g>G` | Grep for word under cursor |
 | `<C-g>s` | Grep across project, drawer mode |

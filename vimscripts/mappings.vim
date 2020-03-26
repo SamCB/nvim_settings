@@ -47,4 +47,4 @@ function! s:CopyBuffer(buffer, cursor_pos)
   call cursor(a:cursor_pos[1], a:cursor_pos[2])
 endfunction
 
-nmap <leader>c :call <SID>PrepareCopyBuffer()<CR>
+nmap <leader>b :call <SID>PrepareCopyBuffer()<CR>

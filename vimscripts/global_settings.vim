@@ -47,6 +47,7 @@ autocmd FileType json syntax region Comment start="/\*"  end="\*/"
 " == Movement ==== 
 set splitbelow splitright " move the cursor to the window just split
 set nofoldenable " Turn off folding
+set scrolloff=9 " Minimal number of screen lines to keep above and below the cursor
 
 " == Display ==== 
 " Column Guide
