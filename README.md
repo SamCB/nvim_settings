@@ -20,6 +20,7 @@ As such, first priority of this setup is to rely on the LSP as much as possible.
 * Intellisense and Language Server Protocol by [neoclide/coc.nvim](https://github.com/neoclide/coc.nvim). Running everything through the Language Server Protocol dramatically decreases the mess of plugins that your vim config tends to become.
 * Search by [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim). Recommend installing ripgrep to use with this.
 * File navigation by [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree).
+* Debugging by [puremourning/vimspector](https://github.com/puremourning/vimspector).
 * Theme [lifepillar/vim-solarized8](https://github.com/lifepillar/vim-solarized8).
 * "Powerline" by [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline).
 
