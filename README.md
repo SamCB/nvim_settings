@@ -5,8 +5,10 @@ A neovim config I made for myself.
 If it works for you, great!
 No guarantees that it will.
 
-> **Note:** Alpha. I'm just beginning to use this for _"real programming"_, as such, I'm likely to change things as it goes.
-> This message will be removed at some stage when I'd consider it _"stable"_.
+> **Note:** Beta. I've been using this for real world development for close to a year now.
+> Things aren't changing that much, but there are still some things I want to change, so I'll say this is "beta".
+> Will I ever set aside time to implement them?
+> If this message is still here, it clearly means I haven't.
 
 ### Wait, so if all that exists, why a new one?
 
