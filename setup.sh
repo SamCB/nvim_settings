@@ -30,7 +30,7 @@ else
   echo "Setting up Python environments"
   # Just some required python stuff
   pyenv install -s 2.7.17
-  pyenv install -s 3.8.0
+  pyenv install -s 3.9.5
 
   if [ -n "$OVERRIDE_PY" ]; then
     if [[ $(pyenv virtualenvs) =~ "nvim_settings_py2" ]]; then
@@ -48,7 +48,7 @@ else
     exit 1
   }
   {
-    pyenv virtualenv 3.8.0 nvim_settings_py3
+    pyenv virtualenv 3.9.5 nvim_settings_py3
   } || {
     echo "If it already exists, setting -o will override the creation or -p will skip all python setup (may cause problems if it hasn't already been configured)"
     exit 1
