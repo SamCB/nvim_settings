@@ -41,9 +41,9 @@ endfunction
 
 function! s:denite_filter_my_settings() abort
   imap <silent><buffer> <C-o>
-  \ <Plug>(denite_filter_quit)
+  \ <Plug>(denite_filter_update)
   imap <silent><buffer> <Esc>
-  \ <Plug>(denite_filter_quit)
+  \ <Plug>(denite_filter_update)
   inoremap <silent><buffer><expr> <CR>
   \ denite#do_map('do_action')
   inoremap <silent><buffer><expr> <C-v>
@@ -88,8 +88,8 @@ catch
 endtry
 
 " Mappings
-nmap <C-p> :<C-u>DeniteProjectDir -start-filter=1 file/rec<CR>
-nmap <C-b> :<C-u>Denite -start-filter=1 buffer<CR>
+nmap <C-p> :<C-u>DeniteProjectDir -start-filter file/rec<CR>
+nmap <C-b> :<C-u>Denite -start-filter buffer<CR>
 nmap <C-g>g :<C-u>Denite grep:. -no-empty<CR>
 nmap <C-g>G :<C-u>DeniteCursorWord grep:.<CR>
 
