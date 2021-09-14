@@ -56,33 +56,11 @@ endfunction
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Jump into the floating window, try to expand
-function! s:bigFloatingWindow()
-  if (coc#util#has_float())
-    if (exists('w:coc_floating_window') && w:coc_floating_window == 1)
-    " shrink and leave window
-    let w:coc_floating_window = 0
-
-    execute 'resize '.w:default_height
-    execute 'vertical resize '.w:default_width
-
-      wincmd w
-    else
-      " enter and expand window
-      call coc#util#float_jump()
-      let w:coc_floating_window = 1
-      let w:default_width = winwidth(0)
-      let w:default_height = winheight(0)
-
-      180wincmd |
-      20wincmd _
-
-    endif
-  endif
-endfunction
-
-
-nmap <leader>o :call <SID>bigFloatingWindow()<CR>
+" Scroll the floating window
+nnoremap <nowait><expr> <C-S-D> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+nnoremap <nowait><expr> <C-S-U> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+inoremap <nowait><expr> <C-S-D> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-S-U> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
 
 " Remap for rename current word
 nmap <leader>cr <Plug>(coc-rename)
@@ -91,7 +69,7 @@ nmap <leader>cr <Plug>(coc-rename)
 xmap <leader>ca  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ca  <Plug>(coc-codeaction)
+nmap <leader>ca  <Plug>(coc-codeaction-line)
 " Fix autofix problem of current line
 nmap <leader>cf  <Plug>(coc-fix-current)
 
